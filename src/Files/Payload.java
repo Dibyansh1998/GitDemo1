@@ -20,7 +20,7 @@ public class Payload {
 		 		+ "    \"language\": \"French-IN\"\r\n"
 		 		+ "}";
 	}
-	public static String Cousename()
+	public static String CousePrice()
 	{
 		return "{\r\n"
 				+ "\"dashboard\": {\r\n"
@@ -46,6 +46,15 @@ public class Payload {
 				+ "]\r\n"
 				+ "}\r\n"
 				+ "";
+	}
+	public static String AddBook(String isbn, String aisle)
+	{
+		return "{\r\n"
+				+ "    \"name\":\"Learn Appium Automation in Java\",\r\n"
+				+ "    \"isbn\":\""+isbn+"\",\r\n"
+				+ "    \"aisle\":\""+aisle+"\",\r\n"
+				+ "    \"author\":\"John foe\"\r\n"
+				+ "}";
 	}
 
 }

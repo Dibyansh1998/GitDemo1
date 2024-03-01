@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Files.Payload;
@@ -7,15 +8,22 @@ public class SumValidationOnJSON {
 
 	@Test
 	public void sumofcources() {
-		JsonPath js = new JsonPath(Payload.Cousename());
-		int count = 0;
+		
+		int sum=0;
+		
+		JsonPath js = new JsonPath(Payload.CousePrice());
+		int count = js.getInt("courses.size()");
 		for (int i = 0; i < count; i++) {
-			int price = js.get("courses[" + i + "].price");
-			int copies = js.get("courses[" + i + "].copies");
+			int price = js.getInt("courses[" + i + "].price");
+			int copies = js.getInt("courses[" + i + "].copies");
 			int amount = price * copies;
 			System.out.println(amount);
-			
+			  sum= sum + amount;	
 		}
+		
+		System.out.println("This is total sum of the amount: " +sum); 
+		int purchaseAmount=js.getInt("dashboard.purchaseAmount");
+		Assert.assertEquals(purchaseAmount, sum);
 	}
 
 }

@@ -5,13 +5,13 @@ public class ComplexJsonParse {
 
 	public static void main(String[] args) {
 
-		JsonPath js = new JsonPath(Payload.Cousename());
+		JsonPath js = new JsonPath(Payload.CousePrice());
 
 		// Print number of courses returned by API
 		int count = js.getInt("courses.size()");
 		System.out.println(count);
 
-		// Print purchase Ammount
+		// Print purchase Amount
 		int purchaseAmmount = js.getInt("dashboard.purchaseAmount");
 		System.out.println(purchaseAmmount);
 
