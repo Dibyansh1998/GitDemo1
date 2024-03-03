@@ -20,7 +20,7 @@ public class Payload {
 		 		+ "    \"language\": \"French-IN\"\r\n"
 		 		+ "}";
 	}
-	public static String CousePrice()
+	public static String CoursePrice()
 	{
 		return "{\r\n"
 				+ "\"dashboard\": {\r\n"

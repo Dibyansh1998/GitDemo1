@@ -5,7 +5,7 @@ public class ComplexJsonParse {
 
 	public static void main(String[] args) {
 
-		JsonPath js = new JsonPath(Payload.CousePrice());
+		JsonPath js = new JsonPath(Payload.CoursePrice());
 
 		// Print number of courses returned by API
 		int count = js.getInt("courses.size()");

@@ -29,7 +29,7 @@ public class DynamicJson {
 	{
 		//Array: Array is collection of same data type
 		//multidimensional array = Collection of array
-		return new Object[][] {{"abcd","1234"},{"defg","4567"},{"ghij","7890"}};
+		return new Object[][] {{"Dibyansh","9795"},{"Ishu","12345"},{"Chhotu","7893"}};
 	}
 
 }
